@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>TheReachApp.com - Get Our App</title>
+<script type='text/javascript'>
+var isMobile = {
+    Android: function() {
+        return /Android/i.test(navigator.userAgent);
+    },
+    BlackBerry: function() {
+        return /BlackBerry/i.test(navigator.userAgent);
+    },
+    iOS: function() {
+        return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    },
+    Windows: function() {
+        return /IEMobile/i.test(navigator.userAgent);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+    }
+};
+
+if(isMobile.iOS()) {
+    location.href = 'https://itunes.apple.com/us/app/reach-real-career-opportunities/id915364904';
+}
+else if(isMobile.Android()) {
+    location.href = 'https://play.google.com/store/apps/details?id=com.bigrocklabs.reachandroid';
+}
+
+else if(!isMobile.any()) {
+ location.href = 'http://thereachapp.com';
+}
+</script>
+</head>
+<body>
+  
+</body>
+</html>
